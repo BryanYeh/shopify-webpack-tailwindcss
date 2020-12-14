@@ -82,8 +82,8 @@ if (mode === "development") {
         [
           "echo Build Complete",
           live_deploy,
-          live_watch,
           "shopify-themekit open",
+          live_watch,
         ],
         parallel: false,
       },

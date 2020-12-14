@@ -36,7 +36,7 @@
    ```
    {{ 'application.js' | asset_url | script_tag }}
    ```
-7. Remove ``.scss`` from **dist/layout/theme.liquid** (*line 11*)
+7. Change `scss` to `bundle` from **dist/layout/theme.liquid** (*line 11*)
    ```
     {{ 'application.scss.css' | asset_url | stylesheet_tag }}
    ```
