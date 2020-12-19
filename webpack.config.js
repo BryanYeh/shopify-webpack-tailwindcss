@@ -28,6 +28,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
+      {
         test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
@@ -81,11 +91,10 @@ if (mode === "development") {
         scripts:
         [
           "echo Build Complete",
-          live_deploy,
           "shopify-themekit open",
           live_watch,
         ],
-        parallel: false,
+        parallel: true,
       },
     })
   );
